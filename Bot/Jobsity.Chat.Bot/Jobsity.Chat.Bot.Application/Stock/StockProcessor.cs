@@ -21,7 +21,8 @@ namespace Jobsity.Chat.Bot.Application.Stock
             {
                 var csvFileContent = await _client.GetAsync(stockCode);
                 var stockInformation = ProcessCsvFile(csvFileContent);
-                _messageProducer.SendMessage(stockInformation.Close);
+                var messageToSend = $"{stockCode} quote is ${stockInformation.Close} per share.";
+                _messageProducer.SendMessage(messageToSend);
             }
             catch (Exception ex)
             {
