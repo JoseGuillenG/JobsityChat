@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Jobsity.Chat.Bot.MessageBroker.Abstractions\Jobsity.Chat.Bot.MessageBroker.Abstractions.csproj" />
+    <ProjectReference Include="..\Jobsity.Chat.Bot.Models\Jobsity.Chat.Bot.Models.csproj" />
     <ProjectReference Include="..\Jobsity.Chat.Bot.RestClient.Abstractions\Jobsity.Chat.Bot.RestClient.Abstractions.csproj" />
   </ItemGroup>
 

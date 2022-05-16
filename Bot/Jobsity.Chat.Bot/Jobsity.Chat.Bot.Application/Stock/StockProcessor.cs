@@ -1,4 +1,5 @@
 ﻿using Jobsity.Chat.Bot.MessageBroker.Producer.Abstractions;
+using Jobsity.Chat.Bot.Models.Stock;
 using Jobsity.Chat.Bot.RestClient.Abstractions.Client;
 
 namespace Jobsity.Chat.Bot.Application.Stock
@@ -20,7 +21,7 @@ namespace Jobsity.Chat.Bot.Application.Stock
             {
                 var csvFileContent = await _client.GetAsync(stockCode);
                 var stockInformation = ProcessCsvFile(csvFileContent);
-                _messageProducer.SendMessage(stockInformation);
+                _messageProducer.SendMessage(stockInformation.Close);
             }
             catch (Exception ex)
             {
@@ -28,21 +29,40 @@ namespace Jobsity.Chat.Bot.Application.Stock
             }
         }
 
-        private string ProcessCsvFile(string csvFileContent)
+        private StockInformation ProcessCsvFile(string csvFileContent)
         {
-            using (var reader = new StreamReader(@"C:\test.csv"))
+            // I'm assuming the result will always be title on the first row and the information of the stock on the second one
+            var title = true;
+            StockInformation result = null;
+            using (var reader = new StreamReader(csvFileContent))
             {
-                List<string> listA = new List<string>();
-                List<string> listB = new List<string>();
                 while (!reader.EndOfStream)
                 {
-                    var line = reader.ReadLine();
-                    var values = line.Split(';');
+                    if (title)
+                    {
+                        title = false;
+                        continue;
+                    }
 
-                    listA.Add(values[0]);
-                    listB.Add(values[1]);
+                    var line = reader.ReadLine();
+                    var values = line.Split(',');
+                    result = new StockInformation
+                    {
+                        Code = values[0],
+                        Date = values[1],
+                        Time = values[2],
+                        Open = values[3],
+                        High = values[4],
+                        Low = values[5],
+                        Close = values[6],
+                        Volume = values[7]
+                    };
+
+                    break;
                 }
             }
+
+            return result;
         }
     }
 }
