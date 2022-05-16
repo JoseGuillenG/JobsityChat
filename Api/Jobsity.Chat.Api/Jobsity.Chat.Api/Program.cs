@@ -1,5 +1,3 @@
-
-
 using Jobsity.Chat.Api.MessageBroker;
 
 var builder = WebApplication.CreateBuilder(args);
