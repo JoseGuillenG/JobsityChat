@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="NewFolder\" />
+    <ProjectReference Include="..\Jobsity.Chat.Bot.MessageBroker.Abstractions\Jobsity.Chat.Bot.MessageBroker.Abstractions.csproj" />
+    <ProjectReference Include="..\Jobsity.Chat.Bot.RestClient.Abstractions\Jobsity.Chat.Bot.RestClient.Abstractions.csproj" />
   </ItemGroup>
 
 </Project>

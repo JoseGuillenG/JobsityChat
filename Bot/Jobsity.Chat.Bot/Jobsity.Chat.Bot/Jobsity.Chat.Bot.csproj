@@ -12,7 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Jobsity.Chat.Bot.Application\Jobsity.Chat.Bot.Application.csproj" />
     <ProjectReference Include="..\Jobsity.Chat.Bot.MessageBroker\Jobsity.Chat.Bot.MessageBroker.csproj" />
+    <ProjectReference Include="..\Jobsity.Chat.Bot.RestClient.Abstractions\Jobsity.Chat.Bot.RestClient.Abstractions.csproj" />
+    <ProjectReference Include="..\Jobsity.Chat.Bot.RestClient\Jobsity.Chat.Bot.RestClient.csproj" />
   </ItemGroup>
 
 </Project>

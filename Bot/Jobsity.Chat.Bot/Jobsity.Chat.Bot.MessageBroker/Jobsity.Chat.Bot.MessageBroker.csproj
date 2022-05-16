@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Jobsity.Chat.Bot.Application\Jobsity.Chat.Bot.Application.csproj" />
     <ProjectReference Include="..\Jobsity.Chat.Bot.MessageBroker.Abstractions\Jobsity.Chat.Bot.MessageBroker.Abstractions.csproj" />
   </ItemGroup>
 

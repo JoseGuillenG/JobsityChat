@@ -1,4 +1,4 @@
-﻿using Jobsity.Chat.Bot.MessageBroker.Producer.Abstractions;
+﻿using Jobsity.Chat.Bot.Application.Stock;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -8,13 +8,13 @@ namespace Jobsity.Chat.Bot.MessageBroker.Producer
 {
     public class RabbitMQSubscriber: IHostedService
     {
-        private readonly IMessageProducer _messageProducer;
+        private readonly IStockProcessor _stockProcessor;
         private IConnection _connection = null;
         private IModel _channel = null;
 
-        public RabbitMQSubscriber(IMessageProducer messageProducer)
+        public RabbitMQSubscriber(IStockProcessor stockProcessor)
         {
-            _messageProducer = messageProducer;
+            _stockProcessor = stockProcessor;
         }
 
         private void Run()
@@ -48,12 +48,14 @@ namespace Jobsity.Chat.Bot.MessageBroker.Producer
             return Task.CompletedTask;
         }
 
-        private void ProcessMessage(object? model, BasicDeliverEventArgs args)
+        private async void ProcessMessage(object? model, BasicDeliverEventArgs args)
         {
             var body = args.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
 
             Console.WriteLine($"Message received: {message}");
+
+            await _stockProcessor.ProcessStockMessageAsync(message);
         }
     }
 }
