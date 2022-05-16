@@ -35,17 +35,17 @@ namespace Jobsity.Chat.Bot.Application.Stock
             // I'm assuming the result will always be title on the first row and the information of the stock on the second one
             var title = true;
             StockInformation result = null;
-            using (var reader = new StreamReader(csvFileContent))
+            using (var reader = new StringReader(csvFileContent))
             {
-                while (!reader.EndOfStream)
+                while (true)
                 {
+                    var line = reader.ReadLine();
                     if (title)
                     {
                         title = false;
                         continue;
                     }
 
-                    var line = reader.ReadLine();
                     var values = line.Split(',');
                     result = new StockInformation
                     {
