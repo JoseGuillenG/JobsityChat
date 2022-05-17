@@ -1,8 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using Jobsity.Chat.Api.MessageBroker.Abstractions.Producer;
+using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System.Text;
 
-namespace Jobsity.Chat.Api.MessageBroker
+namespace Jobsity.Chat.Api.MessageBroker.Producer
 {
     public class RabbitMQProducer: IMessageProducer
     {

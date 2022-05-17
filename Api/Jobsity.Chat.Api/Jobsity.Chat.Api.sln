@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Chat.Api", "Jobsity.Chat.Api\Jobsity.Chat.Api.csproj", "{03884FD2-6375-4B78-AE71-8FF2A8FB35C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.MessageBroker", "Jobsity.Chat.Api.MessageBroker\Jobsity.Chat.Api.MessageBroker.csproj", "{C2C6285F-910E-4D34-99B6-520626A6C8B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Chat.Api.MessageBroker", "Jobsity.Chat.Api.MessageBroker\Jobsity.Chat.Api.MessageBroker.csproj", "{C2C6285F-910E-4D34-99B6-520626A6C8B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.MessageBroker.Abstractions", "Jobsity.Chat.Api.MessageBroker.Abstractions\Jobsity.Chat.Api.MessageBroker.Abstractions.csproj", "{F9BEC927-49AF-4575-B7B5-734CF4302E5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{C2C6285F-910E-4D34-99B6-520626A6C8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C6285F-910E-4D34-99B6-520626A6C8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C6285F-910E-4D34-99B6-520626A6C8B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9BEC927-49AF-4575-B7B5-734CF4302E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9BEC927-49AF-4575-B7B5-734CF4302E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9BEC927-49AF-4575-B7B5-734CF4302E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9BEC927-49AF-4575-B7B5-734CF4302E5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

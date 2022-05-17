@@ -1,4 +1,4 @@
-﻿namespace Jobsity.Chat.Api.MessageBroker
+﻿namespace Jobsity.Chat.Api.MessageBroker.Abstractions.Producer
 {
     public interface IMessageProducer
     {

@@ -1,4 +1,5 @@
-using Jobsity.Chat.Api.MessageBroker;
+using Jobsity.Chat.Api.MessageBroker.Abstractions.Producer;
+using Jobsity.Chat.Api.MessageBroker.Producer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//Adding subscriber for the rabbitMQ
+builder.Services.AddHostedService<RabbitMQSubscriber>();
 
 var app = builder.Build();
 

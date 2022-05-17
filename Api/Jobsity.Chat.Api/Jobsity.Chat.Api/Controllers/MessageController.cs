@@ -1,4 +1,4 @@
-﻿using Jobsity.Chat.Api.MessageBroker;
+﻿using Jobsity.Chat.Api.MessageBroker.Abstractions.Producer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
