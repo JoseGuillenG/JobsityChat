@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Jobsity.Chat.Api.Application\Jobsity.Chat.Api.Application.csproj" />
     <ProjectReference Include="..\Jobsity.Chat.Api.MessageBroker.Abstractions\Jobsity.Chat.Api.MessageBroker.Abstractions.csproj" />
   </ItemGroup>
 

@@ -19,7 +19,7 @@ builder.Services.AddAuthorization(options =>
 });
 builder.Services.AddRazorPages()
     .AddMicrosoftIdentityUI();
-builder.Services.AddSignalR();
+//builder.Services.AddSignalR();
 
 var app = builder.Build();
 
@@ -41,6 +41,6 @@ app.UseAuthorization();
 
 app.MapRazorPages();
 app.MapControllers();
-app.MapHub<ChatHub>("/chatHub");
+//app.MapHub<ChatHub>("/chatHub");
 
 app.Run();

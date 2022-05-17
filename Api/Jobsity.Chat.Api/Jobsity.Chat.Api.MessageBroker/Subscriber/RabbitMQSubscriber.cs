@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Jobsity.Chat.Api.Application.Chat;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
@@ -8,11 +9,13 @@ namespace Jobsity.Chat.Api.MessageBroker.Producer
 {
     public class RabbitMQSubscriber : IHostedService
     {
+        private readonly IChatProcessor _chatProcessor;
         private IConnection _connection = null;
         private IModel _channel = null;
 
-        public RabbitMQSubscriber()
+        public RabbitMQSubscriber(IChatProcessor chatProcessor)
         {
+            _chatProcessor = chatProcessor;
         } 
 
         public Task StartAsync(CancellationToken cancelToken = default)
@@ -53,7 +56,7 @@ namespace Jobsity.Chat.Api.MessageBroker.Producer
 
             Console.WriteLine($"Message received: {message}");
 
-            //await _stockProcessor.ProcessStockMessageAsync(messageDeserialized);
+            await _chatProcessor.ProcessMessageAsync("Bot", messageDeserialized);
         }
     }
 }
