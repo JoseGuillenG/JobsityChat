@@ -4,17 +4,17 @@ This is the solution for the challenge "Simplee browser-based chat application".
 
 ## About the problem
 
-The problem was particularly difficult since it involved a lot of components and I had only 3 days to complete it, since I had an emergency this friday and saturday. However the main goal was achieved :) 
+The problem was particularly difficult since it involved a lot of components and I only had 3 days to complete it, since I had a family emergency the first 2 days. However the main goal was achieved :) 
 
-I actually enjoyed a lot developing this, but I do realize that there's a lot things that can be improved on my code 
+I actually enjoyed a lot developing this, and I do realize that there's a lot things that can be improved on my code (most of the improvements were left behind in order to complete the main functionality)
 
-Some of the things we definetly could improve are:
+Some of the things I could've definetly improved are:
 
-1.- Changing a lot of hard coded configuration into the appsettings.jso
+1.- Changing hard coded configurations into the appsettings.json
 
-2.- Chage the implemetation of a couple of components to use the best practices for each one, I didn't have that much time to implement them
+2.- Chage the implemetation of a couple of components to use the best practices for each one
 
-3.- 100% to include a docker compose file, I had the plan since the beggining but because of the time I wansn't able to complete it
+3.- INCLUDING A DOCKER COMPOSE FILE, this is the best improvement I could add if need it
 
 ## Solution
 The solution I proposed was to split the whole project into 3 components 
