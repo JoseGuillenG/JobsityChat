@@ -28,7 +28,7 @@ namespace Jobsity.Chat.Api.Application.Chat
             }
             catch (Exception ex)
             {
-
+                throw new Exception();
             }
         }
 
@@ -36,7 +36,7 @@ namespace Jobsity.Chat.Api.Application.Chat
         // Reason: I used an independent IHostedService to subscribe the API to the RabbitMQ queue 
         // The IHostedServices are singletons, so I wasn't able to inject the context here
         // since contexts are scoped, but in order to save the bot messages as well, I went on this approach
-        public void SaveMessage(ChatMessage message)
+        private void SaveMessage(ChatMessage message)
         {
             var options = new DbContextOptionsBuilder<ChatContext>()
                 .UseInMemoryDatabase(databaseName: "ChatMessagesDB")

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.Models", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.Persistance", "Jobsity.Chat.Api.Persistance\Jobsity.Chat.Api.Persistance.csproj", "{9187BF03-CEDC-4B47-8943-69B39DCD941D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.Aplication.Tests", "Jobsity.Chat.Api.Aplication.Tests\Jobsity.Chat.Api.Aplication.Tests.csproj", "{E2F7C789-1107-4F4B-B1B9-2D5184BFEBD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{9187BF03-CEDC-4B47-8943-69B39DCD941D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9187BF03-CEDC-4B47-8943-69B39DCD941D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9187BF03-CEDC-4B47-8943-69B39DCD941D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F7C789-1107-4F4B-B1B9-2D5184BFEBD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F7C789-1107-4F4B-B1B9-2D5184BFEBD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F7C789-1107-4F4B-B1B9-2D5184BFEBD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F7C789-1107-4F4B-B1B9-2D5184BFEBD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

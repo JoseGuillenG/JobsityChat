@@ -43,6 +43,14 @@ I used 7 technologies to complete the challenge:
 
 7.- To save the messages I used entity framework on memory DB, this was the fastest approach I thought, in order to have all the functinalities requested 
 
+## Unit tests
+
+I included a new unit test project for "Jobsity.Chat.Api.Application" called "Jobsity.Chat.Api.Application.Tests"
+
+I included all the necesary configuration to make them run, considering the db context, signalR messages and a couple more dependencies, all the external resources are mocked. 
+I only included 7 tests since I believe they are enought to show my knowledge on creating them :)
+
+
 ## Bonus
 
 I did achieved 2 bonus points

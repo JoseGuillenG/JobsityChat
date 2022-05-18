@@ -22,6 +22,8 @@ namespace Jobsity.Chat.Api.Controllers
         {
             newMessage.Id = Guid.NewGuid().ToString();
             newMessage.MessageDateTime = DateTime.Now;
+            newMessage.Code = String.Empty;
+            newMessage.ChatRoom = String.Empty;
             await _chatProcessor.ProcessMessageAsync(newMessage);
 
             return Ok();

@@ -44,7 +44,7 @@ namespace Jobsity.Chat.Api.Application.Chat
             }
             catch (Exception ex)
             {
-
+                throw new Exception();
             }
         }
 
