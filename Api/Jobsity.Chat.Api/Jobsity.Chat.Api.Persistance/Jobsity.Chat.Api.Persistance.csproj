@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,9 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jobsity.Chat.Api.MessageBroker.Abstractions\Jobsity.Chat.Api.MessageBroker.Abstractions.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Jobsity.Chat.Api.Models\Jobsity.Chat.Api.Models.csproj" />
-    <ProjectReference Include="..\Jobsity.Chat.Api.SignalR\Jobsity.Chat.Api.SignalR.csproj" />
   </ItemGroup>
 
 </Project>

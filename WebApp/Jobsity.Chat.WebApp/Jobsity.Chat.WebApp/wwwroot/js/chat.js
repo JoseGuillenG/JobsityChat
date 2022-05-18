@@ -1,6 +1,7 @@
 ﻿"use strict";
+var apiEndpoint = "https://localhost:7235/";
 
-var connection = new signalR.HubConnectionBuilder().withUrl("https://localhost:7235/chart").build();
+var connection = new signalR.HubConnectionBuilder().withUrl(apiEndpoint + "chatHub").build();
 
 //Disable the send button until connection is established.
 document.getElementById("sendButton").disabled = true;
@@ -23,8 +24,22 @@ connection.start().then(function () {
 document.getElementById("sendButton").addEventListener("click", function (event) {
     var user = document.getElementById("userInput").value;
     var message = document.getElementById("messageInput").value;
-    connection.invoke("SendMessage", user, message).catch(function (err) {
-        return console.error(err.toString());
+
+    var data = {
+        UserName: user,
+        Message: message,
+        Code: "Test",
+        ChatRoom: "room1",
+        //MessageDateTime : new Date().getTime()
+    };
+
+    fetch(apiEndpoint + "api/Message", {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
     });
     event.preventDefault();
 });

@@ -1,4 +1,5 @@
 ﻿using Jobsity.Chat.Bot.Application.Stock;
+using Jobsity.Chat.Bot.Models.Messages;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
@@ -53,7 +54,7 @@ namespace Jobsity.Chat.Bot.MessageBroker.Producer
         {
             var body = args.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
-            var messageDeserialized = JsonConvert.DeserializeObject<string>(message);
+            var messageDeserialized = JsonConvert.DeserializeObject<ChatMessage>(message);
 
             Console.WriteLine($"Message received: {message}");
 

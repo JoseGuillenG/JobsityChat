@@ -1,7 +1,10 @@
-﻿namespace Jobsity.Chat.Api.Application.Chat
+﻿using Jobsity.Chat.Api.Models;
+
+namespace Jobsity.Chat.Api.Application.Chat
 {
     public interface IChatProcessor
     {
-        Task ProcessMessageAsync(string user, string messageToSend);
+        Task ProcessUserMessageAsync(ChatMessage newMessage);
+        Task ProcessBotMessageAsync(ChatMessage message);
     }
 }

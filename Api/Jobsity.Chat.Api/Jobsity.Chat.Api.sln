@@ -9,9 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Chat.Api.MessageBro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Chat.Api.MessageBroker.Abstractions", "Jobsity.Chat.Api.MessageBroker.Abstractions\Jobsity.Chat.Api.MessageBroker.Abstractions.csproj", "{F9BEC927-49AF-4575-B7B5-734CF4302E5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.SignalR", "Jobsity.Chat.Api.SignalR\Jobsity.Chat.Api.SignalR.csproj", "{C4B31BB6-8BBD-435B-B5E6-85F82153D756}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Chat.Api.SignalR", "Jobsity.Chat.Api.SignalR\Jobsity.Chat.Api.SignalR.csproj", "{C4B31BB6-8BBD-435B-B5E6-85F82153D756}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.Application", "Jobsity.Chat.Api.Application\Jobsity.Chat.Api.Application.csproj", "{2CA4788E-D48B-4697-85F1-07860F6DCB1A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jobsity.Chat.Api.Application", "Jobsity.Chat.Api.Application\Jobsity.Chat.Api.Application.csproj", "{2CA4788E-D48B-4697-85F1-07860F6DCB1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.Models", "Jobsity.Chat.Api.Models\Jobsity.Chat.Api.Models.csproj", "{07698144-A8FD-4857-A0E4-BB6C6D2A0DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Chat.Api.Persistance", "Jobsity.Chat.Api.Persistance\Jobsity.Chat.Api.Persistance.csproj", "{9187BF03-CEDC-4B47-8943-69B39DCD941D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,14 @@ Global
 		{2CA4788E-D48B-4697-85F1-07860F6DCB1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CA4788E-D48B-4697-85F1-07860F6DCB1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CA4788E-D48B-4697-85F1-07860F6DCB1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07698144-A8FD-4857-A0E4-BB6C6D2A0DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07698144-A8FD-4857-A0E4-BB6C6D2A0DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07698144-A8FD-4857-A0E4-BB6C6D2A0DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07698144-A8FD-4857-A0E4-BB6C6D2A0DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9187BF03-CEDC-4B47-8943-69B39DCD941D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9187BF03-CEDC-4B47-8943-69B39DCD941D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9187BF03-CEDC-4B47-8943-69B39DCD941D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9187BF03-CEDC-4B47-8943-69B39DCD941D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

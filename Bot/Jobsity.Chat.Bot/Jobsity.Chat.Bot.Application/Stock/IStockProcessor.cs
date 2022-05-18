@@ -1,7 +1,9 @@
-﻿namespace Jobsity.Chat.Bot.Application.Stock
+﻿using Jobsity.Chat.Bot.Models.Messages;
+
+namespace Jobsity.Chat.Bot.Application.Stock
 {
     public interface IStockProcessor
     {
-        Task ProcessStockMessageAsync(string stockCode);
+        Task ProcessStockMessageAsync(ChatMessage message);
     }
 }

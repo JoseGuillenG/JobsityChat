@@ -19,10 +19,11 @@ builder.Services.AddSignalR();
 //Adding subscriber for the rabbitMQ
 builder.Services.AddHostedService<RabbitMQSubscriber>();
 
+//Adding cros policy for the web client
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("CorsPolicy", builder => builder
-        .WithOrigins("http://localhost:4200")
+        .WithOrigins("https://localhost:7175")
         .AllowAnyMethod()
         .AllowAnyHeader()
         .AllowCredentials());

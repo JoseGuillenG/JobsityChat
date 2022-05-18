@@ -1,4 +1,5 @@
 ﻿using Jobsity.Chat.Bot.MessageBroker.Producer.Abstractions;
+using Jobsity.Chat.Bot.Models.Messages;
 using Jobsity.Chat.Bot.Models.Stock;
 using Jobsity.Chat.Bot.RestClient.Abstractions.Client;
 
@@ -15,18 +16,21 @@ namespace Jobsity.Chat.Bot.Application.Stock
             _messageProducer = messageProducer;
         }
 
-        public async Task ProcessStockMessageAsync(string stockCode)
+        public async Task ProcessStockMessageAsync(ChatMessage message)
         {
             try
             {
-                var csvFileContent = await _client.GetAsync(stockCode);
+                var csvFileContent = await _client.GetAsync(message.Code);
                 var stockInformation = ProcessCsvFile(csvFileContent);
-                var messageToSend = $"{stockCode} quote is ${stockInformation.Close} per share.";
-                _messageProducer.SendMessage(messageToSend);
+                var messageToSend = $"{message.Code} quote is ${stockInformation.Close} per share.";
+                message.Message = messageToSend;
+                _messageProducer.SendMessage(message);
             }
             catch (Exception ex)
             {
-
+                var messageToSend = $"{message.UserName} I couldnt process your command \"{message.Code}\" on the message \"{message.Message}\"";
+                message.Message = messageToSend;
+                _messageProducer.SendMessage(message);
             }
         }
 
