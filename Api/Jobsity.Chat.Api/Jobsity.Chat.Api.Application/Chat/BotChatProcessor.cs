@@ -22,7 +22,8 @@ namespace Jobsity.Chat.Api.Application.Chat
                 message.MessageDateTime = DateTime.Now;
                 message.UserName = "Bot";
                 message.Id = Guid.NewGuid().ToString();
-                await _hub.Clients.All.SendAsync("ReceiveMessage", "Bot", message.Message);
+                var messageToSend = message.MessageDateTime.ToString() + " " + message.UserName;
+                await _hub.Clients.All.SendAsync("ReceiveMessage", messageToSend, message.Message);
                 SaveMessage(message);
             }
             catch (Exception ex)

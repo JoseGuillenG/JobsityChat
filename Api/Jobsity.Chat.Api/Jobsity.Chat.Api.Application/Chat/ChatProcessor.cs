@@ -25,7 +25,7 @@ namespace Jobsity.Chat.Api.Application.Chat
             try
             {
                 var messages = _context.Messages.OrderByDescending(x => x.MessageDateTime).Take(numberOfMessages);
-                return messages.Select(x => x.MessageDateTime.ToString() + " " + x.UserName + " said " + x.Message).ToList();
+                return messages.Select(x => x.MessageDateTime.ToString() + " " + x.UserName + " says " + x.Message).ToList();
             }
             catch(Exception ex)
             {
