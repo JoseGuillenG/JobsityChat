@@ -14,9 +14,10 @@ Some of the things I could've definetly improved are:
 
 2.- Chage the implemetation of a couple of components to use the best practices for each one
 
-3.- INCLUDING A DOCKER COMPOSE FILE, this is the best improvement I could add if need it
+3.- INCLUDING A DOCKER COMPOSE FILE, this is the best improvement I can add if need it
 
 ## Solution
+
 The solution I proposed was to split the whole project into 3 components 
 
 1.- The web client with the authentication 
@@ -24,6 +25,8 @@ The solution I proposed was to split the whole project into 3 components
 2.- An api where we can manage the chat synchronization and all the backend functionalities
 
 3.- The decoupuled bot which it's only assignment is to retrieve the stock information and send it back to the api
+
+## Technologies used 
 
 I used 7 technologies to complete the challenge:
 
