@@ -75,16 +75,16 @@ Type any message you want or use the command format to activate the bot
 ## Application running
 
 Sign-up
-![Sign-up](https://github.com/[username]/[reponame]/blob/[branch]/Images/SignUp.jpg
+![Sign-up](Images/SignUp.jpg)
 
 Sign-in
-![Sign-in](https://github.com/[username]/[reponame]/blob/[branch]/Images/SignIn.jpg
+![Sign-in](Images/SignIn.jpg)
 
 Normal message
-![Normal message](https://github.com/[username]/[reponame]/blob/[branch]/Images/Normal.jpg
+![Normal message](Images/Normal.jpg)
 
 Bot Message
-![Bot Message](https://github.com/[username]/[reponame]/blob/[branch]/Images/Bot.jpg
+![Bot Message](Images/Bot.jpg)
 
 
 
