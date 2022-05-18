@@ -1,13 +1,16 @@
 using Jobsity.Chat.Api.Application.Chat;
 using Jobsity.Chat.Api.MessageBroker.Abstractions.Producer;
 using Jobsity.Chat.Api.MessageBroker.Producer;
+using Jobsity.Chat.Api.Persistance;
 using Jobsity.Chat.Api.SignalR;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<IMessageProducer, RabbitMQProducer>();
-builder.Services.AddSingleton<IChatProcessor, ChatProcessor>();
+builder.Services.AddScoped<IChatProcessor, ChatProcessor>();
+builder.Services.AddSingleton<IBotChatProcessor, BotChatProcessor>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -28,6 +31,8 @@ builder.Services.AddCors(options =>
         .AllowAnyHeader()
         .AllowCredentials());
 });
+
+builder.Services.AddDbContext<ChatContext>(opt => opt.UseInMemoryDatabase("ChatMessagesDB"));
 
 var app = builder.Build();
 

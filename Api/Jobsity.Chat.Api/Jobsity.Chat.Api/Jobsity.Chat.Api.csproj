@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.5" />
     <PackageReference Include="RabbitMQ.Client" Version="6.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
@@ -16,6 +17,7 @@
     <ProjectReference Include="..\Jobsity.Chat.Api.Application\Jobsity.Chat.Api.Application.csproj" />
     <ProjectReference Include="..\Jobsity.Chat.Api.MessageBroker\Jobsity.Chat.Api.MessageBroker.csproj" />
     <ProjectReference Include="..\Jobsity.Chat.Api.Models\Jobsity.Chat.Api.Models.csproj" />
+    <ProjectReference Include="..\Jobsity.Chat.Api.Persistance\Jobsity.Chat.Api.Persistance.csproj" />
     <ProjectReference Include="..\Jobsity.Chat.Api.SignalR\Jobsity.Chat.Api.SignalR.csproj" />
   </ItemGroup>
 

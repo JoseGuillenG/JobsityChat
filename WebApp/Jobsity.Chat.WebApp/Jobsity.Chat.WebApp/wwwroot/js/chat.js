@@ -16,6 +16,15 @@ connection.on("ReceiveMessage", function (user, message) {
 });
 
 connection.start().then(function () {
+    fetch(apiEndpoint + "api/Message")
+        .then(response => response.json())
+        .then(data => {
+            for (var message of data) {
+                var li = document.createElement("li");
+                document.getElementById("messagesList").prepend(li);
+                li.textContent = `${message}`;
+            }
+        });
     document.getElementById("sendButton").disabled = false;
 }).catch(function (err) {
     return console.error(err.toString());
@@ -26,6 +35,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
     var message = document.getElementById("messageInput").value;
 
     var data = {
+        Id: "id",
         UserName: user,
         Message: message,
         Code: "Test",

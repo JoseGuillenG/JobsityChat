@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Jobsity.Chat.Api.Persistance
 {
-    public class MyContext : DbContext
+    public class ChatContext : DbContext
     {
-        public MyContext(DbContextOptions<MyContext> options)
+        public ChatContext(DbContextOptions<ChatContext> options)
             : base(options)
         { }
-        public DbSet<ChatMessage> Customers { get; set; }
+        public DbSet<ChatMessage> Messages { get; set; }
     }
 }

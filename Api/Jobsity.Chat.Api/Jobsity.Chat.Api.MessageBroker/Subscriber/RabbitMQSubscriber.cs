@@ -10,11 +10,11 @@ namespace Jobsity.Chat.Api.MessageBroker.Producer
 {
     public class RabbitMQSubscriber : IHostedService
     {
-        private readonly IChatProcessor _chatProcessor;
+        private readonly IBotChatProcessor _chatProcessor;
         private IConnection _connection = null;
         private IModel _channel = null;
 
-        public RabbitMQSubscriber(IChatProcessor chatProcessor)
+        public RabbitMQSubscriber(IBotChatProcessor chatProcessor)
         {
             _chatProcessor = chatProcessor;
         } 
@@ -57,7 +57,7 @@ namespace Jobsity.Chat.Api.MessageBroker.Producer
 
             Console.WriteLine($"Message received: {message}");
 
-            await _chatProcessor.ProcessBotMessageAsync(messageDeserialized);
+            await _chatProcessor.ProcessMessageAsync(messageDeserialized);
         }
     }
 }
