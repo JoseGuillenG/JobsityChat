@@ -36,27 +36,27 @@ I used 7 technologies to complete the challenge:
 
 3.- Console application for the bot
 
-4.- Azure AD B2C as the authentication technology, the application is using my client credentials since create a new B2C aplication could be really messy, I'll delete the resources after you review it :)
+4.- Azure AD B2C as the authentication technology. The application is currently using my configuration since creating a new B2C aplication can be really messy, I'll delete the resources after you review it :)
 
-5.- SignalR to syncronize the chat, the syncronization is happening on the API, and the web client is only subscribed to the signalR hub. Although I had the idea on how to implement multiple chat rooms (using groups on signalR) I didn't have the time to do it.
+5.- SignalR to syncronize the chat, the syncronization is happening on the API, and the web client is only subscribed to the signalR hub. Implementing multiple chat rooms is possible using groups, although I ran out time to implement it
 
 6.- RabbitMQ to create the communication between the api and the bot, the communication is bi-directional with RabbitMQ 
 
-6.5.- In order to make possible that the API is able to subscribe to one RabbitMQ I implemented an independent IHostedService for the subscriber
+	6.5.- In order to make the API able to subscribe to the RabbitMQ queue, I implemented an independent IHostedService just for the subscriber
 
-7.- To save the messages I used entity framework on memory DB, this was the fastest approach I thought, in order to have all the functinalities requested 
+7.- To save the messages I used entity framework on memory DB, this was the fastest approach I thought in order to have all the functinalities requested 
 
 ## Unit tests
 
 I included a new unit test project for "Jobsity.Chat.Api.Application" called "Jobsity.Chat.Api.Application.Tests"
 
 I included all the necesary configuration to make them run, considering the db context, signalR messages and a couple more dependencies, all the external resources are mocked. 
-I only included 7 tests since I believe they are enought to show my knowledge on creating them :)
+I only included 7 tests since I believe they are enought to show my knowledge on them :)
 
 
 ## Bonus
 
-I did achieved 2 bonus points
+I achieved 2 bonus points
 
 1.- Used .Net Identity for users authentication
 
